@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import CourseCard from './CourseCard';
 import { useNavigate } from 'react-router-dom';   //  ← Thêm dòng này
-import logoImage from '/home/snappys/Desktop/coinstructor-platform/assets/evol.png';
+import logoImage from '../../../assets/evol.png';
 const MOCK_COURSES = [
   {
     id: '1',
