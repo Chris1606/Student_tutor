@@ -1,0 +1,156 @@
+/* Styles cho component AICompanion */
+.ai-companion-container {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(to bottom, #ffffff, #fafafa);
+}
+
+.ai-companion-container.expanded {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.ai-companion-header {
+  user-select: none;
+  background: linear-gradient(to right, #ffffff, #fafafa);
+}
+
+.chat-messages {
+  scrollbar-width: thin;
+  scrollbar-color: #0078FF #f8f9fa;
+  padding: 1rem;
+}
+
+.chat-messages::-webkit-scrollbar {
+  width: 5px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background-color: #0078FF;
+  border-radius: 10px;
+  border: 2px solid #f8f9fa;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+  background-color: #005FCC;
+}
+
+.message-bubble {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.message-bubble:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+.message-input {
+  resize: none;
+  min-height: 44px;
+  max-height: 120px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.message-input:focus {
+  background-color: #ffffff;
+  border-color: #0078FF;
+  box-shadow: 0 0 0 3px rgba(0, 120, 255, 0.15);
+}
+
+.send-button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(135deg, #0078FF, #005FCC);
+  box-shadow: 0 2px 4px rgba(0, 120, 255, 0.25);
+}
+
+.send-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 95, 204, 0.35);
+}
+
+.send-button:disabled {
+  opacity: 0.5;
+  background: #e5e7eb;
+  box-shadow: none;
+}
+
+.resize-controls {
+  opacity: 0.7;
+  transition: all 0.2s ease;
+}
+
+.resize-controls:hover {
+  opacity: 1;
+}
+
+.resize-controls button {
+  transition: all 0.2s ease;
+}
+
+.resize-controls button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: scale(1.05);
+}
+
+/* Hiệu ứng animate typing khi AI đang trả lời */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+}
+
+.typing-indicator span {
+  height: 6px;
+  width: 6px;
+  background-color: #0078FF;
+  display: block;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+
+.typing-indicator span:nth-of-type(1) {
+  animation: 1s blink infinite 0.3333s;
+}
+.typing-indicator span:nth-of-type(2) {
+  animation: 1s blink infinite 0.6666s;
+}
+.typing-indicator span:nth-of-type(3) {
+  animation: 1s blink infinite 0.9999s;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+/* Stats cards */
+.stats-card {
+  background: linear-gradient(135deg, #ffffff, #f9fbff);
+  border: 1px solid rgba(0, 120, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 120, 255, 0.1);
+}
+
+.stats-icon {
+  background: linear-gradient(135deg, #E6F2FF, #CCE5FF);
+  transition: all 0.3s ease;
+}
+
+.stats-card:hover .stats-icon {
+  transform: scale(1.05);
+}
